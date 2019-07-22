@@ -79,17 +79,27 @@ $(function() {
     new WOW().init();
 
     // Grid Slider
-    var swiper1 = new Swiper('.innerGrid:last-child .swiper-container', {
-        loop: true,
-        autoplay: true,
-        navigation: {
-          nextEl: '.innerGrid:last-child .swiper-button-next',
-          prevEl: '.innerGrid:last-child .swiper-button-prev',
-        },
-        pagination: {
-            el: '.innerGrid:last-child .swiper-pagination',
-            clickable: true
-        },
+    // var swiper1 = new Swiper('.innerGrid:last-child .swiper-container', {
+    //     loop: true,
+    //     autoplay: true,
+    //     navigation: {
+    //       nextEl: '.innerGrid:last-child .swiper-button-next',
+    //       prevEl: '.innerGrid:last-child .swiper-button-prev',
+    //     },
+    //     pagination: {
+    //         el: '.innerGrid:last-child .swiper-pagination',
+    //         clickable: true
+    //     },
+    // });
+
+    $('.owl-carousel').owlCarousel({
+        // autoplay: true,
+        rtl:true,
+        loop:true,
+        nav:true,
+        items: 1,
+        dots: true,
+        smartSpeed: 1000
     });
 
 })
