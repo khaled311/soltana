@@ -145,6 +145,8 @@ body{
 footer .copy img {
     margin-left: 5px;
     margin-right: 0;
+    width: 56px;
+    height: 21px;
 }
 
 footer .social a:not(:last-child) {

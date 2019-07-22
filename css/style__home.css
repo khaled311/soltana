@@ -63,14 +63,14 @@ ul.res {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0,0,0, 0.6);
   position: fixed;
   top: 40px;
   right: 30px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999999;
+  z-index: 9999;
   display: none;
 }
 
@@ -132,8 +132,13 @@ ul.res {
   margin-bottom: 40px;
 }
 
+.navBody .head .close1{
+  display: flex;
+  align-items: center;
+}
+
 .navBody .head .close1 i {
-  font-size: 25px;
+  font-size: 20px;
   color: #dedede;
   cursor: pointer;
 }
@@ -198,7 +203,12 @@ ul.res {
   transition: .5s;
 }
 
-.navBody .accDrop .dropHead span:nth-child(2).trans {
+.navBody .accDrop .dropHead i{
+  transition: .5s;
+  font-size: 9px;
+}
+
+.navBody .accDrop .dropHead i.trans {
   transform: rotate(180deg);
 }
 
@@ -356,7 +366,7 @@ ul.res {
   background-color: transparent;
   border: 0;
   color: #9c9c9c;
-  margin-right: -20px;
+  margin-right: -17px;
 }
 
 .up .search button.cl {
@@ -390,12 +400,12 @@ ul.res {
 }
 
 .up .social .lang{
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #9c9c9c;
+  background-color: #dedede;
   color: #FFF;
   border-radius: 50%;
   font-size: 12px;
@@ -403,7 +413,7 @@ ul.res {
 }
 
 .up .social .lang:hover{
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, .5);
   color: #FFF;
 }
 
@@ -534,8 +544,16 @@ ul.res {
   width: 100%;
 }
 
+.navTop .rtLinks > ul li .drpDwn ul li:hover a {
+  color: #000;
+}
+
 .navTop .rtLinks > ul li .drpDwn ul li:not(:last-child), .navTop .ltLinks > ul li .drpDwn ul li:not(:last-child) {
   border-bottom: 1px solid #f2f2f2;
+}
+
+.navTop .rtLinks > ul li .drpDwn ul li a{
+  color: #969696;
 }
 
 .navTop .rtLinks > ul li .drpDwn ul li a, .navTop .ltLinks > ul li .drpDwn ul li a {
@@ -545,7 +563,7 @@ ul.res {
 .navTop .rtLinks > ul li a, .navTop .ltLinks > ul li a {
   position: relative;
   z-index: 9;
-  color: #969696;
+  color: #000;
   font-size: 16px;
   transition: .5s;
 }
@@ -556,7 +574,7 @@ ul.res {
 }
 
 .navTop .rtLinks > ul li a:hover, .navTop .ltLinks > ul li a:hover {
-  color: #000;
+  color: #969696;
 }
 
 .car-sec .swiper-slide {
@@ -582,9 +600,10 @@ ul.res {
   font-size: 46px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .car-sec .swiper-slide .details h2 {
     font-size: 35px;
+    margin-bottom: 0
   }
 }
 
@@ -677,11 +696,7 @@ ul.res {
   color: #FFF;
 }
 
-.swiper-pagination {
-  display: none;
-}
-
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .swiper-pagination {
     display: block;
   }
@@ -698,7 +713,9 @@ ul.res {
 }
 
 .swiper-pagination {
-  bottom: 0 !important;
+  bottom: 20px !important;
+  /* background-color: #ffffff5c;
+  padding: 2px 0; */
 }
 
 @media (max-width: 767px) {
@@ -727,6 +744,12 @@ ul.res {
   color: #000
 }
 
+@media only screen and (max-width: 767px) {
+  .overview h2 {
+    margin-bottom: 30px;
+  }
+}
+
 .overview h2:after {
   content: "";
   position: absolute;
@@ -736,6 +759,12 @@ ul.res {
   bottom: -30px;
   right: 50%;
   transform: translateX(50%);
+}
+
+@media only screen and (max-width: 767px) {
+  .overview h2:after {
+    bottom: -20px;
+  }
 }
 
 .overview p {
@@ -869,6 +898,7 @@ ul.res {
 
 .services .serv .details p {
   font-size: 17px;
+  font-family: "frtLight";
   color: #000;
   line-height: 2;
   padding-left: 30px;
@@ -1103,6 +1133,12 @@ ul.res {
   padding: 60px 0;
 }
 
+@media only screen and (max-width: 767px) {
+  .testim {
+    padding: 30px 0;
+  }
+}
+
 .testim .container > h2 {
   text-align: center;
   position: relative;
@@ -1154,6 +1190,7 @@ ul.res {
 .testim .ui-card-slider .quote h2 {
   font-size: 18px;
   font-family: "frtBold";
+  margin-top: 35px;
 }
 
 .testim .ui-card-slider .quote p {
@@ -1161,6 +1198,8 @@ ul.res {
   font-family: "frtLight";
   position: relative;
   padding: 0 30px;
+  line-height: 1.625;
+  color: rgb(73, 72, 72);  
 }
 
 .testim .ui-card-slider .quote p:after {
