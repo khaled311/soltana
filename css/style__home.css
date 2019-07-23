@@ -159,56 +159,40 @@ ul.res {
   line-height: 2.857;
 }
 
+.navBody .links ul li.MenuTrigger a{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBody .links ul li.MenuTrigger a:focus{
+  text-decoration: none;
+}
+
+.navBody .links ul li.MenuTrigger ul{
+  display: none;
+}
+
+.navBody .links ul li.MenuTrigger ul li a{
+  color: #9c9c9c
+}
+
+.navBody .links ul li.MenuTrigger ul li a:hover{
+  color: #000;
+}
+
+.navBody .links ul li a > i{
+  font-size: 9px;
+  transition: .5s;
+}
+
 .navBody .links ul li a:hover {
   text-decoration: none;
   color: #9c9c9c;
 }
 
-.navBody .accDrop {
-  border-bottom: 1px solid #ebebeb;
-  display: none;
-  padding: 10px;
-}
-
-@media (max-width: 991px) {
-  .navBody .accDrop {
-    display: block;
-  }
-}
-
-.navBody .accDrop .dropHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.navBody .accDrop .dropHead span {
-  color: #000;
-  font-size: 14px;
-  font-family: "frt";
-  transition: .5s
-}
-
-.navBody .accDrop .dropHead span:hover{
-  color: #9c9c9c;
-}
-
-.navBody .accDrop .dropHead span:nth-child(2) {
-  width: 0;
-  height: 0;
-  border-top: 5px solid #000;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  transition: .5s;
-}
-
-.navBody .accDrop .dropHead i{
-  transition: .5s;
-  font-size: 9px;
-}
-
-.navBody .accDrop .dropHead i.trans {
+.navBody .links ul li a > i.trans {
   transform: rotate(180deg);
 }
 
@@ -485,23 +469,30 @@ ul.res {
   margin-left: 22px;
 }
 
-.navTop .rtLinks > ul li:hover .drpDwn ul, .navTop .ltLinks > ul li:hover .drpDwn ul {
+.navTop .rtLinks > ul li a, .navTop .ltLinks > ul li a {
+  position: relative;
+  z-index: 999;
+  color: #000;
+  font-size: 16px;
+  transition: .5s;
+}
+
+.navTop .rtLinks > ul li.MenuTrigger{
+  position: relative;
+}
+
+.navTop .rtLinks > ul li.MenuTrigger:hover ul{
   opacity: 1;
   visibility: visible;
   transform: translate(50%, 25px);
 }
 
-.navTop .rtLinks > ul li .drpDwn, .navTop .ltLinks > ul li .drpDwn {
-  position: relative;
-}
-
-.navTop .rtLinks > ul li .drpDwn ul, .navTop .ltLinks > ul li .drpDwn ul {
+.navTop .rtLinks > ul li.MenuTrigger ul{
   width: 155px;
   position: absolute;
   top: 0;
-  right: 85%;
+  right: 50%;
   transform: translate(50%, 40px);
-  padding: 7px 10px;
   background-color: #FFF;
   border-radius: 3px;
   padding: 15px 10px;
@@ -513,13 +504,8 @@ ul.res {
   transition: .5s;
 }
 
-@media (min-width: 1200px) {
-  .navTop .rtLinks > ul li .drpDwn ul, .navTop .ltLinks > ul li .drpDwn ul {
-    right: 50%;
-  }
-}
-
-.navTop .rtLinks > ul li .drpDwn ul .shape, .navTop .ltLinks > ul li .drpDwn ul .shape {
+.navTop .rtLinks > ul li.MenuTrigger ul:before {
+  content: "";
   width: 0;
   height: 0;
   display: block;
@@ -534,38 +520,41 @@ ul.res {
 }
 
 @media (min-width: 1200px) {
-  .navTop .rtLinks > ul li .drpDwn ul .shape, .navTop .ltLinks > ul li .drpDwn ul .shape {
+  .navTop .rtLinks > ul li.MenuTrigger ul:before {
     right: 50%;
   }
 }
 
-.navTop .rtLinks > ul li .drpDwn ul li, .navTop .ltLinks > ul li .drpDwn ul li {
+@media (min-width: 992px) {
+  .navTop .rtLinks > ul li.MenuTrigger ul {
+    right: 85%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navTop .rtLinks > ul li.MenuTrigger ul {
+    right: 50%;
+  }
+}
+
+.navTop .rtLinks > ul li.MenuTrigger ul li{
+  margin: 0;
+  text-align: center;
   padding: 5px 0;
   width: 100%;
 }
 
-.navTop .rtLinks > ul li .drpDwn ul li:hover a {
-  color: #000;
-}
-
-.navTop .rtLinks > ul li .drpDwn ul li:not(:last-child), .navTop .ltLinks > ul li .drpDwn ul li:not(:last-child) {
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.navTop .rtLinks > ul li .drpDwn ul li a{
-  color: #969696;
-}
-
-.navTop .rtLinks > ul li .drpDwn ul li a, .navTop .ltLinks > ul li .drpDwn ul li a {
+.navTop .rtLinks > ul li.MenuTrigger ul li a{
+  color: #9c9c9c;
   font-size: 14px;
 }
 
-.navTop .rtLinks > ul li a, .navTop .ltLinks > ul li a {
-  position: relative;
-  z-index: 9;
+.navTop .rtLinks > ul li.MenuTrigger ul li a:hover{
   color: #000;
-  font-size: 16px;
-  transition: .5s;
+}
+
+.navTop .rtLinks > ul li.MenuTrigger ul li:not(:last-child){
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .navTop .rtLinks > ul li a i, .navTop .ltLinks > ul li a i {

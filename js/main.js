@@ -1,9 +1,9 @@
 $(function() {
 
 
-    $(".accDrop .dropHead").on("click", function() {
-        $(".accDrop .dropBody").slideToggle();
-        $(".accDrop .arr").toggleClass("trans");
+    $("li.MenuTrigger a").on("click", function() {
+        $("li.MenuTrigger > ul").slideToggle();
+        $("li.MenuTrigger a i").toggleClass("trans");
     });
 
     // open Side Nav

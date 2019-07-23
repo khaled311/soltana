@@ -51,8 +51,30 @@ body{
     margin-right: 0;
 }
 
-.navTop .rtLinks > ul li .drpDwn ul, .navTop .ltLinks > ul li .drpDwn ul{
-    right: 35%;
+@media (min-width: 992px){
+    .navTop .rtLinks > ul li.MenuTrigger ul {
+        right: 35%;
+    }
+}
+
+@media (min-width: 992px){
+    .navTop .rtLinks > ul li a, .navTop .ltLinks > ul li a {
+        font-size: 15px;
+    }
+
+    .navTop .rtLinks > ul li.MenuTrigger ul:before{
+        right: 55%;
+    }
+}
+
+@media (min-width: 1200px){
+    .navTop .rtLinks > ul li a, .navTop .ltLinks > ul li a {
+        font-size: 16px;
+    }
+
+    .navTop .rtLinks > ul li.MenuTrigger ul:before{
+        right: 50%;
+    }
 }
 
 .navTop .rtLinks > ul li .drpDwn ul .shape, .navTop .ltLinks > ul li .drpDwn ul .shape{
